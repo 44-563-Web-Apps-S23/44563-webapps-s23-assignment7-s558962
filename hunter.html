@@ -46,7 +46,9 @@
     <p id="penalty">“Penalty is zero.”</p>
     <p class="h"> “Click for help!”</p>
     <div id="help">"Help report”.</div>
+    <button class="btn btn-primary" onclick="bonus()">Bonus</button>
 <br>
+
     <div class="container">
         <div class="d-flex">
     <div><img src="bush.jpg" id="0" style="height: 100px; width: 100px;" onclick="check(0)"></div>
@@ -145,6 +147,48 @@
                 pen+=2;
                 penalty.innerHTML="Penalty is "+pen;
             }
+            let rv1,rv2,rv3;
+        function bonus(){
+            rv1=Math.floor(Math.random()*24);
+            console.log(rv1);
+            rv2=Math.floor(Math.random()*24);
+            console.log(rv2);
+            rv3=Math.floor(Math.random()*24);
+            console.log(rv3);
+            lastCheck=rv3;
+            catLocation=rv1;
+            mouseLocation=rv2;
+            bonus=0;
+            p=0;
+            let last_col=lastCheck%6;
+            let last_row=Math.floor(lastCheck/6);
+            let cat_col=catLocation%6;
+            let cat_row=Math.floor(catLocation/6);
+            let col_diff=Math.abs(last_col-cat_col);
+            let row_diff=(Math.abs(last_row-cat_row));
+            let rat_col=mouseLocation%6;
+            let rat_row=Math.floor(mouseLocation/6);
+            let rat_col_diff=Math.abs(last_col-rat_col);
+            let rat_row_diff=(Math.abs(last_row-rat_row));
+            console.log(row_diff,col_diff)
+            if(rat_row_diff<=1 && rat_col_diff<=1)
+            {
+                document.getElementById("help").innerHTML="squeek"
+                p+=2;
+                penalty.innerHTML="Penalty is "+p;
+            }
+            else if(row_diff<=1 && col_diff<=1)
+            {
+                document.getElementById("help").innerHTML="Meow"
+                p+=2;
+                penalty.innerHTML="Penalty is "+p;
+            }
+            else{
+                document.getElementById("help").innerHTML="sorry, no help available"
+                p+=2;
+                penalty.innerHTML="Penalty is "+p;
+            }
+        }
 
     }
 </script>
