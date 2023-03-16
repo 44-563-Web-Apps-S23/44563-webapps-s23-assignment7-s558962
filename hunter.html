@@ -49,45 +49,103 @@
 <br>
     <div class="container">
         <div class="d-flex">
-    <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-    <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-    <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-    <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-    <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-    <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
+    <div><img src="bush.jpg" id="0" style="height: 100px; width: 100px;" onclick="check(0)"></div>
+    <div><img src="bush.jpg" id="1" style="height: 100px; width: 100px;" onclick="check(1)"></div>
+    <div><img src="bush.jpg" id="2" style="height: 100px; width: 100px;" onclick="check(2)"></div>
+    <div><img src="bush.jpg" id="3" style="height: 100px; width: 100px;" onclick="check(3)"></div>
+    <div><img src="bush.jpg" id="4" style="height: 100px; width: 100px;" onclick="check(4)"></div>
+    <div><img src="bush.jpg" id="5" style="height: 100px; width: 100px;" onclick="check(5)"></div>
 
 </div>
 </div>
     <div class="container">
             <div class="d-flex">
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;""></div>
+                <div><img src="bush.jpg" id="6" style="height: 100px; width: 100px;" onclick="check(6)"></div>
+                <div><img src="bush.jpg" id="7" style="height: 100px; width: 100px;" onclick="check(7)"></div>
+                <div><img src="bush.jpg" id="8" style="height: 100px; width: 100px;" onclick="check(8)"></div>
+                <div><img src="bush.jpg" id="9" style="height: 100px; width: 100px;" onclick="check(9)"></div>
+                <div><img src="bush.jpg" id="10" style="height: 100px; width: 100px;" onclick="check(10)"></div>
+                <div><img src="bush.jpg" id="11" style="height: 100px; width: 100px;" onclick="check(11)"></div>
         </div>
 </div>
 
     <div class="container">
         <div class="d-flex">
-            <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-            <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-            <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-            <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-            <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-            <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;""></div>
+            <div><img src="bush.jpg" id="12" style="height: 100px; width: 100px;" onclick="check(12)"></div>
+            <div><img src="bush.jpg" id="13" style="height: 100px; width: 100px;" onclick="check(13)"></div>
+            <div><img src="bush.jpg" id="14" style="height: 100px; width: 100px;" onclick="check(14)"></div>
+            <div><img src="bush.jpg" id="15" style="height: 100px; width: 100px;" onclick="check(15)"></div>
+            <div><img src="bush.jpg" id="16" style="height: 100px; width: 100px;" onclick="check(16)"></div>
+            <div><img src="bush.jpg" id="17" style="height: 100px; width: 100px;" onclick="check(17)"></div>
     </div>
 </div>
 <div class="container">
     <div class="d-flex">
-        <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;"></div>
-                <div><img src="bush.jpg" alt="Bush" style="height: 100px; width: 100px;""></div>
+                <div><img src="bush.jpg" id="18" style="height: 100px; width: 100px;" onclick="check(18)"></div>
+                <div><img src="bush.jpg" id="19" style="height: 100px; width: 100px;" onclick="check(19)"></div>
+                <div><img src="bush.jpg" id="20" style="height: 100px; width: 100px;" onclick="check(20)"></div>
+                <div><img src="bush.jpg" id="21" style="height: 100px; width: 100px;" onclick="check(21)"></div>
+                <div><img src="bush.jpg" id="22" style="height: 100px; width: 100px;" onclick="check(22)"></div>
+                <div><img src="bush.jpg" id="23" style="height: 100px; width: 100px;" onclick="check(23)"></div>
      </div>
     </div>
 </body>
+<script>
+    var d=["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"];
+    var checkCount=0,penalty=0, lastCheck=0, mouseLocation=13, catLocation=21, gameOver=false, penalty=0
+    function check(position){
+        if(gameOver==true){
+                return;
+        }else{
+           let v= position;
+            if(v===mouseLocation){
+                document.getElementById(d[position]).src="mouse.jpg";
+                gameOver=true
+                penalty-=3             
+            }else if(v===catLocation){
+                document.getElementById(d[position]).src="bigcat.jpg";
+                gameOver=true
+                penalty+=4
+            }else{
+                document.getElementById(d[position]).src="grass.jpg";
+            }
+            lastCheck=position 
+            checkCount++
+            penalty++
+            document.getElementById("bushes").innerHTML="Number of bushes checked is "+checkCount; 
+            document.getElementById("penalty").innerHTML="Penalty is "+penalty;  
+        }
+    }
+    function help(){
+        last_col=lastCheck%6;
+        last_row=Math.floor(lastCheck/4);
+            let cat_col=catLocation%6;
+            let cat_row=Math.floor(catLocation/6);
+            let cat_col_diff=Math.abs(last_col-cat_col);
+            let cat_row_diff=(Math.abs(last_row-cat_row));
+            let rat_col=mouseLocation%6;
+            let rat_row=Math.floor(mouseLocation/6);
+            let ratandcat_col_diff=Math.abs(last_col-rat_col);
+            let ratandcat_row_diff=(Math.abs(last_row-rat_row));
+            console.log(cat_row_diff,cat_col_diff)
+            if(ratandcat_row_diff<=1 && ratandcat_col_diff<=1)
+            {
+                document.getElementById("help").innerHTML="squeek"
+                pen+=2;
+                penalty.innerHTML="Penalty is "+pen;
+            }
+            else if(cat_row_diff<=1 && cat_col_diff<=1)
+            {
+                document.getElementById("help").innerHTML="Meow"
+                pen+=2;
+                penalty.innerHTML="Penalty is "+pen;
+            }
+            else{
+                document.getElementById("help").innerHTML="sorry, no help available"
+                pen+=2;
+                penalty.innerHTML="Penalty is "+pen;
+            }
+
+    }
+</script>
 </html>
